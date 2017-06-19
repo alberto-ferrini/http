@@ -25,4 +25,12 @@ export class ServerService {
             return Observable.throw('Something went wrong');
         });
     }
+
+    getAppName() {
+        return this.http.get('https://udemy-ng4-http-3f6dd.firebaseio.com/appName.json').map(
+            (response: Response) => {
+                return response.json();
+            }
+        );
+    }
 }
