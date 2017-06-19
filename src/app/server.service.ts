@@ -10,4 +10,8 @@ export class ServerService {
         });
         return this.http.post('https://udemy-ng4-http-3f6dd.firebaseio.com/data.json', servers, { headers: headers });
     }
+
+    getServers() {
+        return this.http.get('https://udemy-ng4-http-3f6dd.firebaseio.com/data.json');
+    }
 }
